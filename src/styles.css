@@ -1,1 +1,154 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 1.0);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+    box-sizing: content-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+::-webkit-input-placeholder {
+    font-family: Corbel, Cambria, Times, Garamond, sans-serif;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    border-style: none;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: Corbel, Garamond, Cambria, sans-serif;
+    height: 35px;
+}
+
+.btn-borderify {
+    border-style: solid;
+    border-color: #dcdcdc;
+}
+
+.form-group {
+    border-style: solid;
+    background-color: rgba(0, 180, 180, 0.2);
+    width: 15%;
+    border-color: silver;
+    border-radius: 15px;
+    border-width: thin;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+.form-fields {
+    text-align: center;
+}
+
+.form-fields input {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 1.0);
+    border-style: solid;
+    border-color: #dcdcdc;
+    border-width: thin;
+    height: 30px;
+    width: 150px;
+}
+
+.form-fields textarea {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 1.0);
+    border-style: solid;
+    border-color: #dcdcdc;
+    border-width: thin;
+    column-count: 300;
+    width: 150px;
+    height: 50px;
+}
+
+.indicate-error {
+    background-color: rgba(200, 0, 0, 0.3);
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container > div {
+    text-align: center;
+    /*line-height: 75px;*/
+    width: 100%;
+    margin: 2em;
+}
+
+.contain-note {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contain-note > div {
+    text-align: justify;
+    width: 40%;
+}
+
+.contain-note .form-group {
+    width: 40%;
+}
+
+.contain-note .items-list {
+    width: 100%;
+}
+
+.left-sidebar > div {
+    float: left;
+}
+
+.right-sidebar > div {
+    float: right;
+}
+
+.items-list {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    font-family: Cambria, Times, Corbel, sans-serif;
+}
+
+.items-list:hover {
+    border-style: solid;
+    border-color: gray;
+    border-radius: 5px;
+    border-width: thin;
+}
+
+.items-list h3 {
+    font-family: 'Comic Sans MS', 'Trebuchet MS', sans-serif;
+    text-shadow: 1px 0px;
+}
+
+.details-bar {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: #dcdcdc;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: thin;
+    width: 40%;
+    height: 200px;
+    padding: 14px 16px;
+    font-family: Times, Cambria, Corbel, sans-serif;
+}
+
+.details-bar h3 {
+    font-family: 'Comic Sans MS', 'Trebuchet MS', sans-serif;
+}
+
+.header {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-color: #dcdcdc;
+    border-style: solid inset;
+    border-width: medium;
+    text-align: center;
+    font-size: 200%;
+}

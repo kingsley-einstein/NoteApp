@@ -1,0 +1,66 @@
+<div class="contain-note">
+  
+  <div>
+    <form [formGroup]="noteForm" [ngClass]="{'form-group': true}">
+      <div [ngClass]="{'form-fields': true}">
+      <input type="text" placeholder="Enter Title" [formControl]="title" required>
+      <div *ngIf="title.touched">
+        <div *ngIf="!title.valid">
+          <br/>
+          <div [ngClass]="{'indicate-error': true}">Title Is Required</div>
+          <!--<div *ngSwitchDefault>Test</div>-->
+      </div>
+      </div>
+      <br/>
+      <br/>
+      <textarea placeholder="Enter Description" [formControl]="description" required></textarea>
+      <div *ngIf="description.touched">
+        <div *ngIf="!description.valid">
+          <br/>
+          <div [ngClass]="{'indicate-error': true}">Description Is Required</div>
+        </div>
+      </div>
+      <br/>
+      <br/>
+      <textarea placeholder="Enter Content" [formControl]="content" required></textarea>
+      <div *ngIf="content.touched">
+        <div *ngIf="!content.valid">
+          <br/>
+          <div [ngClass]="{'indicate-error': true}">Content Is Required</div>
+        </div>
+      </div>
+      <br/>
+      <br/>
+      <button [ngClass]="{btn: true}" [disabled]="!noteForm.valid" (click)="addNote(noteForm.value)">Add Note</button>
+      </div>
+    </form>
+    
+  
+<br/>
+<br/>
+<ul>
+  <li *ngFor="let item of notes" (click)="showDetails(item)">
+    <div class="items-list">
+      <h3>{{item.getTitle()}}</h3>
+      <br/>
+      {{item.getDescription()}}
+      <br/>
+      {{item.getContent()}}
+    </div>
+    <button [ngClass]="{btn: true, 'btn-borderify': true}" (click)="removeNote(item)">Remove</button>
+  </li>
+</ul>
+<br/>
+</div>
+<!--{{details.title}}-->
+<div>
+  <div class="details-bar">
+    <h3>{{detail.title}}</h3>
+    <br/>
+    <b>Description:</b> {{detail.description}}
+    <br/>
+    <br/>
+    <b>Content:</b> {{detail.content}}
+  </div>
+</div>
+</div>
